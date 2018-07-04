@@ -15,7 +15,7 @@
         MinHeight="73"
         ResizeMode="CanResize"
         BorderThickness="1"
-        Icon="imgs/ICON.ico" BorderBrush="#FFFF3838" Background="Black" >
+        Icon="imgs/ICON.ico" BorderBrush="#FFFF3838" Background="Black" WindowState="Minimized" SizeChanged="Window_SizeChanged" >
 
     <Window.Resources>
 

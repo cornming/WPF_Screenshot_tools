@@ -58,7 +58,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsFormsIntegration" />
     <Reference Include="WindowsHookLib">
-      <HintPath>D:\程式專案\C#\截圖翻譯-2016-05-30\截圖翻譯\bin\Debug\WindowsHookLib.dll</HintPath>
+      <HintPath>bin\Debug\WindowsHookLib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +74,7 @@
     <Compile Include="F_快速鍵偵測.Designer.cs">
       <DependentUpon>F_快速鍵偵測.cs</DependentUpon>
     </Compile>
+    <Compile Include="Shard\NotifyShowBall.cs" />
     <Compile Include="window\W_對話.xaml.cs">
       <DependentUpon>W_對話.xaml</DependentUpon>
     </Compile>
@@ -168,6 +169,11 @@
   <ItemGroup>
     <Resource Include="imgs\刪除.png" />
     <Resource Include="imgs\確認.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ICON.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

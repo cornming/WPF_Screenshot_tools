@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using 截圖.window;
+using 截圖整理工具.Shard;
 
 namespace 截圖 {
     /// <summary>
@@ -28,8 +29,9 @@ namespace 截圖 {
         public String s_快速鍵 = "PrintScreen";
         public W_設定 w_設定;
         public C_setting SET;
+        public NotifyShowBall notifyShowBall ;
 
- 
+
 
 
         public MainWindow() {
@@ -169,7 +171,8 @@ namespace 截圖 {
 
 
             this.Loaded += MainWindow_Loaded;
-
+            notifyShowBall = new NotifyShowBall();
+            notifyShowBall.SetBalloonTip();
         }
 
 
@@ -238,7 +241,17 @@ namespace 截圖 {
             }
         }
 
-
-
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (this.WindowState == WindowState.Minimized)
+            {
+                notifyShowBall.notifyIcon1.Visible = true;
+                this.Hide();
+            }
+            else
+            {
+                notifyShowBall.notifyIcon1.Visible = false;
+            }
+        }
     }
 }
