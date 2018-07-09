@@ -29,7 +29,7 @@ namespace 截圖 {
         public String s_快速鍵 = "PrintScreen";
         public W_設定 w_設定;
         public C_setting SET;
-        public NotifyShowBall notifyShowBall ;
+        public NotifyShowBall notifyShowBall = new NotifyShowBall();
 
 
 
@@ -171,8 +171,12 @@ namespace 截圖 {
 
 
             this.Loaded += MainWindow_Loaded;
-            notifyShowBall = new NotifyShowBall();
             notifyShowBall.SetBalloonTip();
+            notifyShowBall.notifyIcon1.Click += (s, e) =>
+            {
+                notifyShowBall.notifyIcon1.Visible = false;
+                this.Show();
+            };
         }
 
 
@@ -188,8 +192,8 @@ namespace 截圖 {
             //var c_毛玻璃 = new C_window_AERO();
             //c_毛玻璃.func_啟用毛玻璃(this);
 
+            if (Application.Current.Windows.Count > 2) this.Close();
 
-        
         }
 
 
@@ -241,17 +245,15 @@ namespace 截圖 {
             }
         }
 
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+   
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (this.WindowState == WindowState.Minimized)
-            {
-                notifyShowBall.notifyIcon1.Visible = true;
-                this.Hide();
-            }
-            else
-            {
-                notifyShowBall.notifyIcon1.Visible = false;
-            }
+            if (Application.Current.Windows.Count <= 2)
+                e.Cancel = true;
+
+            notifyShowBall.notifyIcon1.Visible = true;
+            this.Hide();
         }
     }
 }

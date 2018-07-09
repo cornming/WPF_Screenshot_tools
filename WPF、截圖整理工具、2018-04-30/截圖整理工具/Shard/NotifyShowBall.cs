@@ -22,7 +22,9 @@ namespace 截圖整理工具.Shard
             notifyIcon1.BalloonTipText = "啟動...";
             //notifyIcon1.BalloonTipIcon = ToolTipIcon.Error;
             notifyIcon1.Visible = true;
-            notifyIcon1.ShowBalloonTip(1000);
+            //notifyIcon1.ShowBalloonTip(1000);
+
+           
 
         }
     }

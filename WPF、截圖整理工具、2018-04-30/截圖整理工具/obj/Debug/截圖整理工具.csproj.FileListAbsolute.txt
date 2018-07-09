@@ -30,3 +30,4 @@ D:\MyDrive\Qsync\Work\WPF\WPF截圖小工具\WPF_Screenshot_tools\WPF、截圖�
 D:\MyDrive\Qsync\Work\WPF\WPF截圖小工具\WPF_Screenshot_tools\WPF、截圖整理工具、2018-04-30\截圖整理工具\obj\Debug\截圖整理工具.pdb
 D:\MyDrive\Qsync\Work\WPF\WPF截圖小工具\WPF_Screenshot_tools\WPF、截圖整理工具、2018-04-30\截圖整理工具\bin\Debug\ICON.ico
 D:\MyDrive\Qsync\Work\WPF\WPF截圖小工具\WPF_Screenshot_tools\WPF、截圖整理工具、2018-04-30\截圖整理工具\obj\Debug\截圖整理工具_Content.g.cs
+D:\MyDrive\Qsync\Work\WPF\WPF截圖小工具\WPF_Screenshot_tools\WPF、截圖整理工具、2018-04-30\截圖整理工具\obj\Debug\截圖整理工具.csprojAssemblyReference.cache
